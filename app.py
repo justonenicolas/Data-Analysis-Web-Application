@@ -19,7 +19,7 @@ if hist_button:
 
 scatter_button = stl.button("Crear Gráfico de Dispersión", type="primary") # Crear botón que genera el gráfico de dispersión
 
-if hist_button:
+if scatter_button:
     # Escribir el mensaje de salida
     stl.header("Gráfico de Dipsersión creado")
     
