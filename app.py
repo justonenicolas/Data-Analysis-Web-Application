@@ -4,6 +4,9 @@ import plotly.express as px
 
 df = pd.read_csv("vehicles_us.csv")
 
+stl.title("# Cree gráficos basados en su selección")
+stl.write("En esta página web usted podrá crear gráficos de su selección a partir de la información proveniente del archivo del histórico de ventas de autos en Estados Unidos")
+
 hist_button = stl.button("Crear Histograma", type="primary") # Crear botón que genera el histograma
 
 if hist_button:
