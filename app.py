@@ -22,6 +22,10 @@ with col2:
                       options=column_names)
 
 
+# Mensaje de aviso
+stl.write("***Nota: Para fines prácticos, el parámetro escogido en el primer campo es el que se usará para la construcción del histograma***")
+
+
 hist_button = stl.button("Crear Histograma", type="primary") # Crear botón que genera el histograma
 
 if hist_button:
@@ -33,6 +37,9 @@ if hist_button:
     
     # Mostrar gráfico interactivo en Streamlit
     stl.plotly_chart(fig, use_container_width=True)
+    
+    # Mensaje de aviso
+    stl.write("***Nota: Para fines prácticos, el parámetro escogido en el primer campo es el que se usará para la construcción del histograma***")
 
 
 scatter_button = stl.button("Crear Gráfico de Dispersión", type="primary") # Crear botón que genera el gráfico de dispersión
@@ -42,7 +49,7 @@ if scatter_button:
     stl.header("Gráfico de Dipsersión creado")
     
     # Crear el gráfico
-    fig = px.histogram(df, x=x_var, y=y_var)
+    fig = px.scatter(df, x=x_var, y=y_var)
     
     # Mostrar gráfico interactivo en Streamlit
     stl.plotly_chart(fig, use_container_width=True)
